@@ -1,12 +1,4 @@
-﻿$(document).ready(function () {
-    // Este codigo habilita el switch custom para los controles Checkbox
-    $(".CustomCheckbox").bootstrapSwitch();
-    // Este codigo es utilizado para bloquear la copia de contenidos del portal
-    $(function () {
-        $(document).bind("contextmenu", function (e) {
-            return false;
-        });
-    });
+﻿
 
 
     $(".MontoMask").mask("#.##0", { reverse: true });
@@ -36,39 +28,7 @@
         }
     });
 
-    $(window).keyup(function (e) {   
-        if (e.keyCode == 44) {
-            copyToClipboard()
-        }
-
-    });
-
-    $('.ControlMultiselect').multiselect({
-        search: {
-            left: '<input type="text" autocomplete="off" name="q"  class="form-control" placeholder="Buscar..." />',
-            //right: '<input type="text" autocomplete="off" name="q" class="form-control SelectedItems" placeholder="Buscar..." />',
-        },
-        fireSearch: function (value) {
-            return value.length > 3;
-        }
-    }
-        );
-
-    $(".ControlBloqueado").keydown(function (e) {
-        if (e.ctrlKey) {
-            //alert("No Permitido");
-            return !(e.ctrlKey);
-        }
-        else if (e.keyCode == 93) {
-            alert("No Permitido");
-            return false;
-
-        }
-    })
-
-    $(".FirmaPicker").imagepicker();
-
-
+   
 
     $(".TablaJQuery").DataTable({
         "deferRender": true,
@@ -144,21 +104,6 @@
 
 
 
-function copyToClipboard() {
-    // Create a "hidden" input
-    var aux = document.createElement("input");
-    // Assign it the value of the specified element
-    aux.setAttribute("value", "Capturar Pantalla deshabilitado.");
-    // Append it to the body
-    document.body.appendChild(aux);
-    // Highlight its content
-    aux.select();
-    // Copy the highlighted text
-    document.execCommand("copy");
-    // Remove it from the body
-    document.body.removeChild(aux);
-    //alert("Print screen desabilitado.");
-}
 
 function CargarDatatable(tabla) {
     

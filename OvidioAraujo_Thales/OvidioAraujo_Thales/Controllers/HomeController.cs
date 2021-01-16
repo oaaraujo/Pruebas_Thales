@@ -13,6 +13,7 @@ namespace OvidioAraujo_Thales.Controllers
     {
         public async Task<ActionResult> Index()
         {
+            
             var model = new VM_Employees();
             var employee = new getAnualSalaryForEmployees();
 
@@ -21,25 +22,33 @@ namespace OvidioAraujo_Thales.Controllers
             return View(model);
         }
 
-        public async Task<ActionResult> About()
+        [HttpPost]
+        public async Task<ActionResult> GetEmployees(FormCollection data, VM_Employees model)
         {
-            ViewBag.Message = "Your application description page.";
-
-            var client = new getAnualSalaryForEmployees();
-             await client.CalculateAnualSalary();
-
-            return View();
-        }
-
-        public async Task<ActionResult> Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
             var employee = new getAnualSalaryForEmployees();
+            string Id = model.id;
+         
 
-            await employee.CalculateAnualSalaryById("6");
+            try
+            {
+                if (Id == "" || Id==null)
+                {
+                   model.ListEmployees = await employee.CalculateAnualSalary();
+                }
+                else
+                {
+                    model.ListEmployees = await employee.CalculateAnualSalaryById(Id);
+                }
+               
 
-            return View();
+            }
+            catch (Exception ex)
+            {
+                model.ListEmployees = new List<EntityLibrary.Employee>();
+            }
+
+            return PartialView("_Listfordata", model);
+            
         }
     }
 }

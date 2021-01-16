@@ -39,34 +39,37 @@ namespace BL_DLL
             }
             catch (Exception ex)
             {
-                throw ex;
+                return ResultList = new List<Employee>();
             }
             
         }
 
+      
         public async Task<List<Employee>> CalculateAnualSalaryById(string id)
         {
             try
             {
                 List<Employee> ResultList = new List<Employee>();
-                EmployeeDta DataEmployee = new EmployeeDta();
+                EmployeeDetail DataEmployee = new EmployeeDetail();
                 GetDataEmployee ObjData = new GetDataEmployee();
 
                 DataEmployee = await ObjData.GetEmployeeById(id);
-
-                foreach (var dta in DataEmployee.Data)
+                if(DataEmployee.Data != null)
                 {
                     ResultList.Add(new Employee
                     {
-                        id = dta.id,
-                        employee_name = dta.employee_name,
-                        employee_salary = dta.employee_salary,
-                        employee_age = dta.employee_age,
-                        profile_image = dta.profile_image,
-                        anual_salary = (decimal.Parse(dta.employee_salary) * 12).ToString()
+                        id = DataEmployee.Data.id,
+                        employee_name = DataEmployee.Data.employee_name,
+                        employee_salary = DataEmployee.Data.employee_salary,
+                        employee_age = DataEmployee.Data.employee_age,
+                        profile_image = DataEmployee.Data.profile_image,
+                        anual_salary = (decimal.Parse(DataEmployee.Data.employee_salary) * 12).ToString()
                     });
                 }
-
+                else
+                {
+                    ResultList = new List<Employee>();
+                }
                 return ResultList;
             }
             catch (Exception ex)

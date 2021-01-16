@@ -3,3 +3,4 @@ C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\EntityLibrary\bin\Debug\Entit
 C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\EntityLibrary\obj\Debug\EntityLibrary.csproj.CoreCompileInputs.cache
 C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\EntityLibrary\obj\Debug\EntityLibrary.dll
 C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\EntityLibrary\obj\Debug\EntityLibrary.pdb
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\EntityLibrary\obj\Debug\EntityLibrary.csprojAssemblyReference.cache

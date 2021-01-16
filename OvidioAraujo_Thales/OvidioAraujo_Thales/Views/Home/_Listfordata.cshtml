@@ -1,13 +1,13 @@
 ﻿@model  OvidioAraujo_Thales.Models.VM_Employees
 
 <div class="row">
-      <div class="panel panel-info">
+    <div class="panel panel-info">
         <div class="panel-heading">
             <strong id="TitleGrid">Employees List</strong>
         </div>
         <div class="panel-body" onselectstart="return false;">
             <div class="col-md-12">
-                <table class="table table-striped" id="_ListData">
+                <table class="table table-striped" id="ListDataTable">
                     <thead>
                         <tr>
                             <th>
@@ -33,26 +33,26 @@
                     <tbody>
                         @foreach (var item in Model.ListEmployees)
                         {
-                        <tr id="row_@item.id">
-                            <td>
-                                @item.id
-                            </td>
-                            <td>
-                                @item.employee_name
-                            </td>
-                            <td>
-                                @item.employee_salary
-                            </td>
-                            <td>
-                                @item.employee_age
-                            </td>
-                            <td>
-                                @item.profile_image
-                            </td>
-                            <td>
-                                @item.anual_salary
-                            </td>
-                        </tr>
+                            <tr id="row_@item.id">
+                                <td>
+                                    @item.id
+                                </td>
+                                <td>
+                                    @item.employee_name
+                                </td>
+                                <td>
+                                    @item.employee_salary
+                                </td>
+                                <td>
+                                    @item.employee_age
+                                </td>
+                                <td>
+                                    @item.profile_image
+                                </td>
+                                <td>
+                                    @item.anual_salary
+                                </td>
+                            </tr>
                         }
                     </tbody>
                 </table>
@@ -62,12 +62,8 @@
 </div>
 
 <script>
+    $(document).ready(function () {
+        $('#ListDataTable').DataTable();
+    });
 
-
-    TablaJquery = CargarDatatable("_ListData");
-
-
-  
-
-  
 </script>

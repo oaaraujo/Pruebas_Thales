@@ -34,9 +34,9 @@ namespace DataAccess
            
         }
 
-        public async Task<EmployeeDta> GetEmployeeById(string id)
+        public async Task<EmployeeDetail> GetEmployeeById(string id)
         {
-            EmployeeDta employeesList = new EmployeeDta();
+            EmployeeDetail employeesList = new EmployeeDetail();
             string Url = "http://dummy.restapiexample.com/api/v1/employee/" + id;
             using (var httpClient = new HttpClient())
             {
@@ -45,7 +45,7 @@ namespace DataAccess
                     if (response.IsSuccessStatusCode)
                     {
                         string apiResponse = await response.Content.ReadAsStringAsync();
-                        employeesList = JsonConvert.DeserializeObject<EmployeeDta>(apiResponse);
+                        employeesList = JsonConvert.DeserializeObject<EmployeeDetail>(apiResponse);
                         return employeesList;
                     }
                     else

@@ -1,22 +1,36 @@
-﻿@{
+﻿@model  OvidioAraujo_Thales.Models.VM_Employees
+@{
     ViewBag.Title = "Home Page";
 }
 
-<input id="Accion" name="Accion" type="hidden" value="Crear" />
-<input id="ObjectId" name="ObjectId" type="hidden" value="" />
-<div id="DivFormPrincipal">
-    <div class="row" id="DivFormData">
-        <div class="col-md-3">
-            <div class="form-group">
-                <label for="id">Employee's ID</label>
-                <input type="text" id="id"  name="id" class="form-control" maxlength="18"/>
-            </div>
-        </div>
-        <div class="row" id="DivBtnControl" style="padding-top:10px;">
+@using (Ajax.BeginForm("GetEmployees", "Home", new AjaxOptions
+{//GetPatients is name of method in PatientController
+    HttpMethod = "POST",
+    UpdateTargetId = "resultTarget"
+}, new { id = "Home" }))
+
+
+{
+    <div id="DivFormPrincipal">
+        <div class="row" id="DivFormData">
             <div class="col-md-3">
                 <div class="form-group">
-                    <button id="Btnsearch" type="submit" class="btn btn-primary">Search&nbsp;</button>
+                    <label for="id">Employee's ID</label>
+                    <input type="text" id="id" name="id" class="form-control" maxlength="18" />
+                </div>
+            </div>
+            <div class="row" id="DivBtnControl" style="padding-top:10px;">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <button id="Btnsearch" type="submit" class="btn btn-primary">Search&nbsp;</button>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
+}
+<hr />
+<div class="row" id="resultTarget" style="padding-top:10px;">
+    @Html.Partial("_Listfordata")
+</div>
