@@ -1,0 +1,5 @@
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\EntityLibrary\bin\Debug\EntityLibrary.dll
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\EntityLibrary\bin\Debug\EntityLibrary.pdb
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\EntityLibrary\obj\Debug\EntityLibrary.csproj.CoreCompileInputs.cache
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\EntityLibrary\obj\Debug\EntityLibrary.dll
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\EntityLibrary\obj\Debug\EntityLibrary.pdb

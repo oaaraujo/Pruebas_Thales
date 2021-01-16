@@ -1,0 +1,13 @@
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\BL_DLL\bin\Debug\BL_DLL.dll
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\BL_DLL\bin\Debug\BL_DLL.pdb
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\BL_DLL\bin\Debug\DataAccess.dll
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\BL_DLL\bin\Debug\EntityLibrary.dll
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\BL_DLL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\BL_DLL\bin\Debug\DataAccess.pdb
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\BL_DLL\bin\Debug\EntityLibrary.pdb
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\BL_DLL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\BL_DLL\obj\Debug\BL_DLL.csprojAssemblyReference.cache
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\BL_DLL\obj\Debug\BL_DLL.csproj.CoreCompileInputs.cache
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\BL_DLL\obj\Debug\BL_DLL.csproj.CopyComplete
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\BL_DLL\obj\Debug\BL_DLL.dll
+C:\Users\AraujoOA\source\repos\OvidioAraujo_Thales\BL_DLL\obj\Debug\BL_DLL.pdb
